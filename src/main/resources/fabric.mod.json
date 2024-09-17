@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "additional",
+	"version": "${version}",
+	"name": "Additional",
+	"description": "Adds extra stuff to Minecraft",
+	"authors": [
+		"Crimson"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CPL",
+	"icon": "assets/additional/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.crimson.additional.Additional"
+		],
+		"fabric-datagen": [
+			"net.crimson.additional.AdditionalDataGenerator"
+		],
+		"client": [
+			"net.crimson.additional.AdditionalClient"
+		]
+	},
+	"mixins": [
+		"additional.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
