@@ -10,7 +10,7 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
     public static final Item STAR_DUST = registerItem("star_dust", new Item(new Item.Settings()));
-
+    public static final Item ORB_OF_POWER = registerItem("orb_of_power", new Item(new Item.Settings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(Additional.MOD_ID, name), item);
@@ -21,6 +21,7 @@ public class ModItems {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(STAR_DUST);
+            entries.add(ORB_OF_POWER);
         });
     }
 }
